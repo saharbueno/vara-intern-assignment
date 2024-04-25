@@ -1,11 +1,9 @@
 // import all required libraries/mods
 import './config.mjs';
-import express from 'express'
-import mongoose from 'mongoose';
-import path from 'path'
+import express from 'express';
+import path from 'path';
 import { google } from 'googleapis';
 import { fileURLToPath } from 'url';
-import './db.mjs';
 
 // start express application
 const app = express();
@@ -21,10 +19,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // middleware to use req.body
 app.use(express.urlencoded({extended: false}));
-
-// define models
-const Contact = mongoose.model('Contact');
-const Projects = mongoose.model('Projects');
 
 // authorization for google sheets api
 const auth = new google.auth.GoogleAuth({
@@ -54,8 +48,31 @@ async function readSheet() {
 }
 // testing . . . :3
 app.get('/', async (req, res) => {
-    const data = await readSheet();
-    res.render('home', {chartData: data});
+    const incomingData = await readSheet();
+    // get labels
+    const dateLabels = incomingData[0].slice(1);
+    // get datasets
+    const datasetArr = [];
+    for (let i = 1; i < incomingData.length; i++) {
+        // parse all strings in the array into numbers
+        const newData = incomingData[i].splice(1).map((d) => {
+            return +d;
+        });
+        const temp = {
+            label: incomingData[i][0],
+            backgroundColor: "#fccadb",
+            borderColor: "#e2d3ea",
+            data: newData,
+            fill: false
+        }
+        datasetArr.push(temp);
+    }
+    const data = {
+        labels: dateLabels,
+        datasets: datasetArr
+    };
+    const jsonData = JSON.stringify(data);
+    res.render('home', { chartData: jsonData });
 });
 
 // listen for port
