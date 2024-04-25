@@ -1,11 +1,13 @@
+// import all required libraries/mods
 import './config.mjs';
 import express from 'express'
 import mongoose from 'mongoose';
-import fetch from  'node-fetch';
 import path from 'path'
+import { google } from 'googleapis';
 import { fileURLToPath } from 'url';
 import './db.mjs';
 
+// start express application
 const app = express();
 
 // set the view engine
@@ -24,9 +26,37 @@ app.use(express.urlencoded({extended: false}));
 const Contact = mongoose.model('Contact');
 const Projects = mongoose.model('Projects');
 
-// testing . . . :3
-app.get('/', (req, res) => {
-    res.render('home', {});
+// authorization for google sheets api
+const auth = new google.auth.GoogleAuth({
+    keyFile: './google.json',
+    scopes: ['https://www.googleapis.com/auth/spreadsheets']
 });
 
+// function to read google sheet
+async function readSheet() {
+    // set up to access necessary sheet
+    const sheets = google.sheets({version: 'v4', auth});
+    const spreadsheetId = '1xYtvMLc8LhBFOgovS8RLCQa2yso7C0ViuyFgXZdt6Z4';
+    const range = 'Location-1!A1:M8';
+    try {
+        // await response
+        const res = await sheets.spreadsheets.values.get({
+            spreadsheetId, range
+        });
+        // get the rows of data
+        const rows = res.data.values;
+        // return the data
+        return rows;
+    } catch(e) {
+        // log out the error
+        console.log(e + `: ${e.message}`);
+    }
+}
+// testing . . . :3
+app.get('/', async (req, res) => {
+    const data = await readSheet();
+    res.render('home', {chartData: data});
+});
+
+// listen for port
 app.listen(process.env.PORT || 3000);
