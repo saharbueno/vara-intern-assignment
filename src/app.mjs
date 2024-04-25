@@ -137,6 +137,7 @@ app.get('/', async (req, res) => {
     waterRecData = JSON.stringify(await getChartData('Water Reycled (m3)'));
     const allJsonData = JSON.stringify(data);
 
+    // render home page with all data
     res.render('home', {allJsonData, waterConsData, gasData, gridData, steamData, foodData, solarData, waterRecData});
 });
 

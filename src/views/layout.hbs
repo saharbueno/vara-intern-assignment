@@ -29,38 +29,54 @@
         <input type="text" placeholder="Search" class=" placeholder-white text-[15px] ml-4 w-full bg-transparent focus:outline-none">
       </div>
       <!--all chart buttons!-->
-      <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
-        <i class="bi bi-graph-up-arrow"></i>
-        <span class="text-[18px] ml-4">Charts</span>
-      </div>
-      <div class="p-2.5 mt-3 ml-2 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] font-thin hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
-        <i class="bi bi-droplet"></i>
-        <span class="text-[15px] ml-4 text-[#383b63]">Water Consumption</span>
-      </div>
-      <div class="p-2.5 mt-3 ml-2 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] font-thin hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
-        <i class="bi bi-fuel-pump"></i>
-        <span class="text-[15px] ml-4 text-[#383b63]">Natural Gas Consumption</span>
-      </div>
-      <div class="p-2.5 mt-3 ml-2 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] font-thin hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
-        <i class="bi bi-lightning-charge-fill"></i>
-        <span class="text-[15px] ml-4 text-[#383b63]">Grid Electricity Consumption</span>
-      </div>
-      <div class="p-2.5 mt-3 ml-2 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] font-thin hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
-        <i class="bi bi-cloudy"></i>
-        <span class="text-[15px] ml-4 text-[#383b63]">Steam Consumption</span>
-      </div>
-      <div class="p-2.5 mt-3 ml-2 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] font-thin hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
-        <i class="bi bi-trash-fill"></i>
-        <span class="text-[15px] ml-4 text-[#383b63]">Food Waste</span>
-      </div>
-      <div class="p-2.5 mt-3 ml-2 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] font-thin hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
-        <i class="bi bi-sun"></i>
-        <span class="text-[15px] ml-4 text-[#383b63]">Solar KWh</span>
-      </div>
-      <div class="p-2.5 mt-3 ml-2 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] font-thin hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
-        <i class="bi bi-recycle"></i>
-        <span class="text-[15px] ml-4 text-[#383b63]">Water Recycled</span>
-      </div>
+      <a href="#all-charts">
+        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
+          <i class="bi bi-graph-up-arrow"></i>
+          <span class="text-[18px] ml-4">Charts</span>
+        </div>
+      </a>
+      <a href="#water-consumption-chart">
+        <div class="p-2.5 mt-3 ml-2 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] font-thin hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
+          <i class="bi bi-droplet"></i>
+          <span class="text-[15px] ml-4 text-[#383b63]">Water Consumption</span>
+        </div>
+      </a>
+      <a href="#natural-gas-consumption-chart">
+        <div class="p-2.5 mt-3 ml-2 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] font-thin hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
+          <i class="bi bi-fuel-pump"></i>
+          <span class="text-[15px] ml-4 text-[#383b63]">Natural Gas Consumption</span>
+        </div>
+      </a>
+      <a href="#grid-electricity-consumption-chart">
+        <div class="p-2.5 mt-3 ml-2 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] font-thin hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
+          <i class="bi bi-lightning-charge-fill"></i>
+          <span class="text-[15px] ml-4 text-[#383b63]">Grid Electricity Consumption</span>
+        </div>
+      </a>
+      <a href="#steam-consumption-chart">
+        <div class="p-2.5 mt-3 ml-2 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] font-thin hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
+          <i class="bi bi-cloudy"></i>
+          <span class="text-[15px] ml-4 text-[#383b63]">Steam Consumption</span>
+        </div>
+      </a>
+      <a href="#food-waste-chart">
+        <div class="p-2.5 mt-3 ml-2 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] font-thin hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
+          <i class="bi bi-trash-fill"></i>
+          <span class="text-[15px] ml-4 text-[#383b63]">Food Waste</span>
+        </div>
+      </a>
+      <a href="#solar-kwh-chart">
+        <div class="p-2.5 mt-3 ml-2 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] font-thin hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
+          <i class="bi bi-sun"></i>
+          <span class="text-[15px] ml-4 text-[#383b63]">Solar KWh</span>
+        </div>
+      </a>
+      <a href="#water-recycled-chart">
+        <div class="p-2.5 mt-3 ml-2 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] font-thin hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
+          <i class="bi bi-recycle"></i>
+          <span class="text-[15px] ml-4 text-[#383b63]">Water Recycled</span>
+        </div>
+      </a>
       <hr class="my-2 border-[#e2d3ea] mix-blend-multiply">
     </div>
     <!--main body div!-->
