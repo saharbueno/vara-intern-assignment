@@ -28,7 +28,7 @@ const Projects = mongoose.model('Projects');
 
 // authorization for google sheets api
 const auth = new google.auth.GoogleAuth({
-    keyFile: './google.json',
+    keyFile: process.env.GOOGLE_KEY_FILE,
     scopes: ['https://www.googleapis.com/auth/spreadsheets']
 });
 
