@@ -12,10 +12,10 @@
   </head>
   <body class="bg-white font-Poppins">
     <!--sidebar div!-->
-    <span class="absolute text-[#383b63] text-4xl top-5 left-4 cursor-pointer" onClick="Open()">
+    <span class="absolute text-[#383b63] text-4xl top-5 left-4 cursor-pointer z-10" onClick="Open()">
       <i class="bi bi-filter-left px-2 bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] rounded-md"></i>
     </span>
-    <div class="sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] p-2 w-[300px] overflow-y-auto text-center bg-gradient-to-br from-[#e2d3ea] to-[#fccadb]">
+    <div class="sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] p-2 w-[300px] overflow-y-auto text-center bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] z-10">
       <div class="text-[#6e77fc] text-xl">
           <div class="p-2.5 mt-1 flex items-center">
             <h1 class="font-bold text-[#6e77fc] text-[20px] ml-3">VaraData</h1>
@@ -64,8 +64,11 @@
       <hr class="my-2 border-[#e2d3ea] mix-blend-multiply">
     </div>
     <!--main body div!-->
-    <div class="main lg:fixed top-0 left-0 left-[300px] m-6">
-       {{{ body }}}
+    <div class="main flex flex-col justify-center items-center mt-10 mb-4 w-[100%] z-0 ml-[-155px]">
+      <h1 class="font-Poppins font-bold text-[#6e77fc] text-[25px]">Welcome to Your Dashboard!</h1>
+    </div>
+    <div class="main flex flex-col justify-center items-center m-16 w-[100%] z-0">
+      {{{ body }}}
     </div>
     <script>
       // function to toggle open the sidebar

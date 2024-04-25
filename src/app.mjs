@@ -46,33 +46,98 @@ async function readSheet() {
         console.log(e + `: ${e.message}`);
     }
 }
-// testing . . . :3
+
+// function to dynamically get chart data for a specific chart
+async function getChartData(chart) {
+    const incomingData = await readSheet();
+    // get labels
+    const dateLabels = incomingData[0].slice(1);
+    // get dataset
+    const datasetArr = [];
+    // define color palette
+    let colorPalette = ["#e2d3ea", "#fccadb", "#383b63", "#6e77fc", "#A7C4C2", "#81D2C7", "#BBE5ED", "#03B5AA", "#DDFFF7"];
+    // get index of needed chart
+    const index = incomingData.findIndex(item => item[0] === chart);
+    // parse all strings in the array into numbers
+    const incomingDataCopy = incomingData[index].slice(1);
+    const newData = incomingDataCopy.map((d) => {
+        return +d;
+    });
+    const colorIndex = index % colorPalette.length;
+    // create data
+    const temp = {
+        label: incomingData[index][0],
+        backgroundColor: colorPalette[colorIndex + 1],
+        borderColor: colorPalette[colorIndex],
+        data: newData,
+        fill: false
+    };
+    datasetArr.push(temp);
+
+    // create data
+    const data = {
+        labels: dateLabels,
+        datasets: datasetArr
+    };
+
+    // return data
+    return data;
+}
+
+// initialize all variables to store data 
+let waterConsData;
+let gasData;
+let gridData;
+let steamData;
+let foodData;
+let solarData;
+let waterRecData;
+
+// route for getting all charts
 app.get('/', async (req, res) => {
     const incomingData = await readSheet();
     // get labels
     const dateLabels = incomingData[0].slice(1);
     // get datasets
     const datasetArr = [];
+
+    // define color palette
+    const colorPalette = ["#e2d3ea", "#fccadb", "#383b63", "#6e77fc", "#A7C4C2", "#81D2C7", "#BBE5ED", "#03B5AA", "#DDFFF7"];
+
     for (let i = 1; i < incomingData.length; i++) {
         // parse all strings in the array into numbers
         const newData = incomingData[i].splice(1).map((d) => {
             return +d;
         });
+        const colorIndex = i % colorPalette.length;
+        // create data
         const temp = {
             label: incomingData[i][0],
-            backgroundColor: "#fccadb",
-            borderColor: "#e2d3ea",
+            backgroundColor: colorPalette[colorIndex + 1],
+            borderColor: colorPalette[colorIndex],
             data: newData,
             fill: false
-        }
+        };
         datasetArr.push(temp);
     }
+
+    // create data
     const data = {
         labels: dateLabels,
         datasets: datasetArr
     };
-    const jsonData = JSON.stringify(data);
-    res.render('home', { chartData: jsonData });
+
+    // generate all charts
+    waterConsData = JSON.stringify(await getChartData('Water consumption (m3)'));
+    gasData = JSON.stringify(await getChartData('Natural gas consumption (m3)'));
+    gridData = JSON.stringify(await getChartData('Grid Electricity Consumption (KWh)'));
+    steamData = JSON.stringify(await getChartData('Steam Consumption (Tons)'));
+    foodData = JSON.stringify(await getChartData('Food waste (Kg)'));
+    solarData = JSON.stringify(await getChartData('Solar KWh'));
+    waterRecData = JSON.stringify(await getChartData('Water Reycled (m3)'));
+    const allJsonData = JSON.stringify(data);
+
+    res.render('home', {allJsonData, waterConsData, gasData, gridData, steamData, foodData, solarData, waterRecData});
 });
 
 // listen for port
