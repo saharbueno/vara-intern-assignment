@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/styles.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <script src="sketch.js"></script>
+  </head>
+  <body class="w-screen">
+    <header class="md:bg-baby-pink bg-white text-[#efa8d3] italic">
+      <!-- tailwind & js responsive nav tutorial from here: https://www.youtube.com/watch?v=vYowvsUiChs !-->
+      <nav class="flex justify-between items-center w-[92%] mx-auto">
+        <div class="mr-4">
+          <img class="w-1/12" src="/assets/website-logo.png" alt="logo">
+        </div>
+        <div class="flex items-center ">
+          <img onclick="onToggleMenu(this)" class="inline-block w-8 cursor-pointer md:hidden" src="/assets/nav.png" alt="nav logo">
+        </div>
+        <div class="nav-links mr-4 md:static absolute md:bg-baby-pink bg-white md:min-h-fit min-h-[26vh] left-0 top-[-100%] md:w-auto w-full flex items center px-5">
+          <ul class="flex md:flex-row flex-col md:items-center md:gap-5 gap-8">
+            <li>
+              <a class="md:hover:border-white md:hover:bg-white md:hover:text-baby-pink hover:border-baby-pink hover:bg-baby-pink hover:text-white hover:rounded-full hover:px-4 hover:py-1" href="/">home</a>
+            </li>
+            <li>
+              <a class="md:hover:border-white md:hover:bg-white md:hover:text-baby-pink hover:border-baby-pink hover:bg-baby-pink hover:text-white hover:rounded-full hover:px-4 hover:py-1" href="/work">work</a>
+            </li>
+            <li>
+              <a class="md:hover:border-white md:hover:bg-white md:hover:text-baby-pink hover:border-baby-pink hover:bg-baby-pink hover:text-white hover:rounded-full hover:px-4 hover:py-1" href="/about-me">about</a>
+            </li>
+            <li>
+              <a class="md:hover:border-white md:hover:bg-white md:hover:text-baby-pink hover:border-baby-pink hover:bg-baby-pink hover:text-white hover:rounded-full hover:px-4 hover:py-1" href="/contact">contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    {{{ body }}}
+    <script>
+      const navLinks = document.querySelector('.nav-links');
+      // to toggle the menu
+      function onToggleMenu(event) {
+        navLinks.classList.toggle('top-[7%]');
+      }
+    </script>
+  </body>
+</html>
