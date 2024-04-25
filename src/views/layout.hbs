@@ -1,11 +1,80 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Data Dashboard</title>
     <link rel="stylesheet" href="/css/styles.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
   </head>
-  <body class="w-screen">
-    {{{ body }}}
+  <body class="bg-white font-Poppins">
+    <!--sidebar div!-->
+    <span class="absolute text-[#383b63] text-4xl top-5 left-4 cursor-pointer" onClick="Open()">
+      <i class="bi bi-filter-left px-2 bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] rounded-md"></i>
+    </span>
+    <div class="sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] p-2 w-[300px] overflow-y-auto text-center bg-gradient-to-br from-[#e2d3ea] to-[#fccadb]">
+      <div class="text-[#6e77fc] text-xl">
+          <div class="p-2.5 mt-1 flex items-center">
+            <h1 class="font-bold text-[#6e77fc] text-[20px] ml-3">VaraData</h1>
+            <i class="bi bi-x ml-36 cursor-pointer lg:hidden" onClick="Close()"></i>
+          </div>
+          <hr class="my-2 border-[#e2d3ea] mix-blend-multiply">
+      </div>
+      <!--search button!-->
+      <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-[#383b63] text-white">
+        <i class="bi bi-search text-sm"></i>
+        <input type="text" placeholder="Search" class=" placeholder-white text-[15px] ml-4 w-full bg-transparent focus:outline-none">
+      </div>
+      <!--all chart buttons!-->
+      <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
+        <i class="bi bi-graph-up-arrow"></i>
+        <span class="text-[18px] ml-4">Charts</span>
+      </div>
+      <div class="p-2.5 mt-3 ml-2 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] font-thin hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
+        <i class="bi bi-droplet"></i>
+        <span class="text-[15px] ml-4 text-[#383b63]">Water Consumption</span>
+      </div>
+      <div class="p-2.5 mt-3 ml-2 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] font-thin hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
+        <i class="bi bi-fuel-pump"></i>
+        <span class="text-[15px] ml-4 text-[#383b63]">Natural Gas Consumption</span>
+      </div>
+      <div class="p-2.5 mt-3 ml-2 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] font-thin hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
+        <i class="bi bi-lightning-charge-fill"></i>
+        <span class="text-[15px] ml-4 text-[#383b63]">Grid Electricity Consumption</span>
+      </div>
+      <div class="p-2.5 mt-3 ml-2 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] font-thin hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
+        <i class="bi bi-cloudy"></i>
+        <span class="text-[15px] ml-4 text-[#383b63]">Steam Consumption</span>
+      </div>
+      <div class="p-2.5 mt-3 ml-2 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] font-thin hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
+        <i class="bi bi-trash-fill"></i>
+        <span class="text-[15px] ml-4 text-[#383b63]">Food Waste</span>
+      </div>
+      <div class="p-2.5 mt-3 ml-2 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] font-thin hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
+        <i class="bi bi-sun"></i>
+        <span class="text-[15px] ml-4 text-[#383b63]">Solar KWh</span>
+      </div>
+      <div class="p-2.5 mt-3 ml-2 flex items-center rounded-md px-4 duration-300 cursor-pointer text-[#383b63] font-thin hover:bg-gradient-to-br from-[#e2d3ea] to-[#fccadb] hover:mix-blend-multiply">
+        <i class="bi bi-recycle"></i>
+        <span class="text-[15px] ml-4 text-[#383b63]">Water Recycled</span>
+      </div>
+      <hr class="my-2 border-[#e2d3ea] mix-blend-multiply">
+    </div>
+    <!--main body div!-->
+    <div class="main fixed top-0 left-0 left-[300px] m-6">
+       {{{ body }}}
+    </div>
+    <script>
+      // function to toggle open the sidebar
+      function Open() {
+        document.querySelector('.sidebar').classList.toggle('left-[-300px]');
+      }
+      // function to toggle close the sidebar
+      function Close() {
+        document.querySelector('.sidebar').classList.toggle('left-[-300px]');
+      }
+    </script>
   </body>
 </html>
