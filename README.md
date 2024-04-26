@@ -3,11 +3,11 @@
 ### [Want to get started and install right away? Click here!](#install-run)
 
 ## Description
-A full-stack web application that imports environmental data from Google Sheets of a small-scale food processing plant and generates interactive charts in the frontend. The dashboard will showcase the current environmental metrics of the plant, providing insights into various aspects of its operations.
+A full-stack web application that imports environmental data from Google Sheets of a small-scale food processing plant and generates interactive charts in the front end. The dashboard will showcase the current environmental metrics of the plant, providing insights into various aspects of its operations.
 
 ## Built With
 <p align="center">
-❀ HTML ❀ CSS ❀ JavaScript ❀ Tailwind CSS ❀ Bootstrap Icons ❀ Chart.js ❀ Google Sheets API ❀ Node.js ❀ Express.js ❀ Font Awesome ❀ OAuth 2.0 ❀
+❀ HTML/Handlebars ❀ JavaScript ❀ Node.js ❀ Express.js ❀ Tailwind CSS ❀ Chart.js ❀ Google Sheets API ❀ OAuth 2.0 ❀ Bootstrap Icons ❀
 </p>
 
 ## Features
@@ -22,7 +22,7 @@ A full-stack web application that imports environmental data from Google Sheets 
 **♡ Dynamic Charts**
 * Utilizes Chart.js library to dynamically generate charts for different environmental data categories.
 * Supports both line and bar chart types.
-* Displays charts for water consumption, natural gas consumption, grid electricity consumption, steam consumption, food waste, solar KWh, and water recycled.
+* Displays charts for water consumption, natural gas consumption, grid electricity consumption, steam consumption, food waste, solar KWh, and water recycling.
 
 **♡ Chart Type Switching**
 * Allows users to switch between line and bar chart views for each data category.
