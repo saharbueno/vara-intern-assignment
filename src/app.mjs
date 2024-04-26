@@ -1,7 +1,7 @@
 // import all required libraries/mods
 import './config.mjs';
 import express from 'express';
-import favicon from 'server-favicon';
+import favicon from 'serve-favicon';
 import path from 'path';
 import { google } from 'googleapis';
 import { fileURLToPath } from 'url';
