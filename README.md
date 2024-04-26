@@ -67,8 +67,16 @@ cd src
 node app.mjs
 ```
 
+**OR**
+
+[Visit my deployed site here!](https://vara-intern-assignment-7b10492b6031.herokuapp.com/)
+
 ## Thank You!
 <p align="center">I would like to thank the co-founder of Vara who assigned this project to me. I learned so much throughout the process of creating this project-- I solidified my skills in Tailwind, learned how to use the Google Sheets API, and learned to make something more visually appealing with colors and design. I hope to continue to get better at being a full-stack developer and continue my career growth journey ໒꒰ྀི´ ˘ ` ꒱ྀིა!</p>
+
+<p align="center">
+  <a href="https://vara-intern-assignment-7b10492b6031.herokuapp.com/"><i>Visit my site!</i></a>
+</p>
 
 <p align="center">
   <i>˚ʚ♡ɞ˚ Thanks for visiting! ˚ʚ♡ɞ˚</i>
