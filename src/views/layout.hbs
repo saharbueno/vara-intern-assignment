@@ -26,7 +26,7 @@
       <!--search button!-->
       <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-[#383b63] text-white">
         <i class="bi bi-search text-sm"></i>
-        <input type="text" placeholder="Search" class=" placeholder-white text-[15px] ml-4 w-full bg-transparent focus:outline-none">
+        <input type="text" placeholder="Search" class="search-input placeholder-white text-[15px] ml-4 w-full bg-transparent focus:outline-none">
       </div>
       <!--all chart buttons!-->
       <a href="#all-charts">
@@ -80,10 +80,11 @@
       <hr class="my-2 border-[#e2d3ea] mix-blend-multiply">
     </div>
     <!--main body div!-->
-    <div class="main flex flex-col justify-center items-center mt-10 mb-4 w-[100%] z-0 ml-[-155px]">
-      <h1 class="font-Poppins font-bold text-[#6e77fc] text-[25px]">Welcome to Your Dashboard!</h1>
+    <div class="main lg:left-[300px] left-0 lg:mt-10 md:mt-10 mt-20 ml-16 w-[85%] z-0 relative overflow-auto">
+      <h1 class="font-Poppins font-bold text-[#6e77fc] text-[25px]">Welcome to Your Dashboard</h1>
+      <h2 class="font-Poppins font-semibold bg-gradient-to-r from-[#6e77fc] to-[#fccadb] inline-block text-transparent bg-clip-text text-[20px] p-2 pl-0">For Environmental Data</h2><span>🐻🌸</span>
     </div>
-    <div class="main flex flex-col justify-center items-center m-16 w-[100%] z-0">
+    <div class="main lg:left-[300px] left-0 m-16 lg:w-[85%] w-[100%] z-0 relative overflow-auto">
       {{{ body }}}
     </div>
     <script>
@@ -96,6 +97,33 @@
       function Close() {
         document.querySelector('.sidebar').classList.toggle('left-[-300px]');
       }
+
+      // helper function to replace hyphens with spaces
+      function replaceHyphensWithSpaces(str) {
+          return str.replace(/-/g, ' ');
+      }
+
+      // initialize array for all ids of elements to scroll to
+      const elementsToScrollTo = ['all-charts', 'water-consumption-chart', 'natural-gas-consumption-chart', 'grid-electricity-consumption-chart', 'steam-consumption-chart', 'food-waste-chart', 'solar-kwh-chart', 'water-recycled-chart'];
+      // function for search bar to scroll element into view when something is searched for
+      const searchInput = document.querySelector('.search-input');
+      searchInput.addEventListener('input', (event) => {
+        const value = event.target.value.toLowerCase();
+        for (let a = 0; a < elementsToScrollTo.length; a++) {
+          const elementId = replaceHyphensWithSpaces(elementsToScrollTo[a].toLowerCase());
+          if (elementId.includes(value)) {
+            const element = document.getElementById(elementsToScrollTo[a]);
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+        if (value === '') {
+            const element = document.getElementById('all-charts');
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+      });
     </script>
+    <footer class="text-[#fccadb] font-Poppins font-thin flex justify-center items-center mb-6">
+      <p class="bg-gradient-to-r from-[#6e77fc] to-[#fccadb] inline-block text-transparent bg-clip-text">♡ By Sahar Bueno-Abdala | <a href="https://github.com/saharbueno/vara-intern-assignment" class="hover:text-[#383b63] hover:underline">github repo</a> | <a href="https://www.linkedin.com/in/saharbueno/" class="hover:text-[#383b63] hover:underline">linkedin</a> ♡</p>
+    </footer>
   </body>
 </html>

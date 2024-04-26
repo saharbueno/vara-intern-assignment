@@ -121,7 +121,7 @@ app.get('/', async (req, res) => {
         datasetArr.push(temp);
     }
 
-    // create data
+    // create data object
     const data = {
         labels: dateLabels,
         datasets: datasetArr

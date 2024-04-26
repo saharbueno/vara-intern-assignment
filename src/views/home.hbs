@@ -1,5 +1,5 @@
-<div id="all-charts" class="bg-gradient-to-br from-[white] to-[#e2d3ea] p-10 rounded-md mb-10 hover:from-[white] hover:to-[#fccadb]">
-    <div class="relative flex flex-col break-words w-min m-auto shadow-lg rounded bg-white bg-opacity-75">
+<div id="all-charts" class="bg-gradient-to-br from-[white] to-[#e2d3ea] p-10 rounded-md mb-10 hover:from-[white] hover:to-[#fccadb] w-min">
+    <div class="relative flex flex-col break-words w-full m-auto shadow-lg rounded bg-white bg-opacity-75">
         <div class="rounded-t mb-0 px-4 py-3 bg-transparent">
             <div class="flex flex-wrap items-center">
                 <div class="relative w-full max-w-full flex-grow flex-1">
@@ -7,16 +7,20 @@
                 </div>
             </div>
         </div>
-        <div class="p-4 flex-auto">
+        <div class="p-4 flex-auto w-full">
             <!-- Chart -->
-            <div class="relative w-max h-max font-Poppins">
+            <div class="relative font-Poppins lg:w-[40vw] lg:h-[35vw] md:w-[55vw] md:h-[50vw] w-[70vw] h-[85vw]">
                 <canvas id="line-chart"></canvas>
+                <canvas id="line-chart-bar"></canvas>
             </div>
         </div>
     </div>
+    <div class="flex justify-end">
+        <div class="change-chart mt-5 p-2.5 bg-[#6e77fc] rounded-md text-white font-Poppins text-[15px] font-bold lg:w-[25%] w-[30%] text-center hover:bg-[#383b63]">Bar Chart <i class="bi bi-bar-chart ml-2"></i></div>
+    </div>
 </div>
 
-<div id="water-consumption-chart" class="bg-gradient-to-br from-[white] to-[#e2d3ea] p-10 rounded-md mb-10 hover:from-[white] hover:to-[#fccadb]">
+<div id="water-consumption-chart" class="bg-gradient-to-br from-[white] to-[#e2d3ea] p-10 rounded-md mb-10 hover:from-[white] hover:to-[#fccadb] w-min">
     <div class="relative flex flex-col break-words w-min m-auto shadow-lg rounded bg-white bg-opacity-75">
         <div class="rounded-t mb-0 px-4 py-3 bg-transparent">
             <div class="flex flex-wrap items-center">
@@ -27,14 +31,18 @@
         </div>
         <div class="p-4 flex-auto">
             <!-- Water Consumption Chart -->
-            <div class="relative w-max h-max font-Poppins">
+            <div class="relative font-Poppins lg:w-[40vw] lg:h-[35vw] md:w-[55vw] md:h-[50vw] w-[70vw] h-[85vw]">
                 <canvas id="water-chart"></canvas>
+                <canvas id="water-chart-bar"></canvas>
             </div>
         </div>
     </div>
+    <div class="flex justify-end">
+        <div class="change-chart mt-5 p-2.5 bg-[#6e77fc] rounded-md text-white font-Poppins text-[15px] font-bold lg:w-[25%] w-[30%] text-center hover:bg-[#383b63]">Bar Chart <i class="bi bi-bar-chart ml-2"></i></div>
+    </div>
 </div>
 
-<div id="natural-gas-consumption-chart" class="bg-gradient-to-br from-[white] to-[#e2d3ea] p-10 rounded-md mb-10 hover:from-[white] hover:to-[#fccadb]">
+<div id="natural-gas-consumption-chart" class="bg-gradient-to-br from-[white] to-[#e2d3ea] p-10 rounded-md mb-10 hover:from-[white] hover:to-[#fccadb] w-min">
     <div class="relative flex flex-col break-words w-min m-auto shadow-lg rounded bg-white bg-opacity-75">
         <div class="rounded-t mb-0 px-4 py-3 bg-transparent">
             <div class="flex flex-wrap items-center">
@@ -45,14 +53,18 @@
         </div>
         <div class="p-4 flex-auto">
             <!-- Natual Gas Consumption Chart -->
-            <div class="relative w-max h-max font-Poppins">
+            <div class="relative font-Poppins lg:w-[40vw] lg:h-[35vw] md:w-[55vw] md:h-[50vw] w-[70vw] h-[85vw]">
                 <canvas id="gas-chart"></canvas>
+                <canvas id="gas-chart-bar"></canvas>
             </div>
         </div>
     </div>
+    <div class="flex justify-end">
+        <div class="change-chart mt-5 p-2.5 bg-[#6e77fc] rounded-md text-white font-Poppins text-[15px] font-bold lg:w-[25%] w-[30%] text-center hover:bg-[#383b63]">Bar Chart <i class="bi bi-bar-chart ml-2"></i></div>
+    </div>
 </div>
 
-<div id="grid-electricity-consumption-chart" class="bg-gradient-to-br from-[white] to-[#e2d3ea] p-10 rounded-md mb-10 hover:from-[white] hover:to-[#fccadb]">
+<div id="grid-electricity-consumption-chart" class="bg-gradient-to-br from-[white] to-[#e2d3ea] p-10 rounded-md mb-10 hover:from-[white] hover:to-[#fccadb] w-min">
     <div class="relative flex flex-col break-words w-min m-auto shadow-lg rounded bg-white bg-opacity-75">
         <div class="rounded-t mb-0 px-4 py-3 bg-transparent">
             <div class="flex flex-wrap items-center">
@@ -63,14 +75,18 @@
         </div>
         <div class="p-4 flex-auto">
             <!-- Grid Electricity Consumption Chart -->
-            <div class="relative w-max h-max font-Poppins">
+            <div class="relative font-Poppins lg:w-[40vw] lg:h-[35vw] md:w-[55vw] md:h-[50vw] w-[70vw] h-[85vw]">
                 <canvas id="grid-chart"></canvas>
+                <canvas id="grid-chart-bar"></canvas>
             </div>
         </div>
     </div>
+    <div class="flex justify-end">
+        <div class="change-chart mt-5 p-2.5 bg-[#6e77fc] rounded-md text-white font-Poppins text-[15px] font-bold lg:w-[25%] w-[30%] text-center hover:bg-[#383b63]">Bar Chart <i class="bi bi-bar-chart ml-2"></i></div>
+    </div>
 </div>
 
-<div id="steam-consumption-chart" class="bg-gradient-to-br from-[white] to-[#e2d3ea] p-10 rounded-md mb-10 hover:from-[white] hover:to-[#fccadb]">
+<div id="steam-consumption-chart" class="bg-gradient-to-br from-[white] to-[#e2d3ea] p-10 rounded-md mb-10 hover:from-[white] hover:to-[#fccadb] w-min">
     <div class="relative flex flex-col break-words w-min m-auto shadow-lg rounded bg-white bg-opacity-75">
         <div class="rounded-t mb-0 px-4 py-3 bg-transparent">
             <div class="flex flex-wrap items-center">
@@ -81,14 +97,18 @@
         </div>
         <div class="p-4 flex-auto">
             <!-- Steam Consumption Chart -->
-            <div class="relative w-max h-max font-Poppins">
+            <div class="relative font-Poppins lg:w-[40vw] lg:h-[35vw] md:w-[55vw] md:h-[50vw] w-[70vw] h-[85vw]">
                 <canvas id="steam-chart"></canvas>
+                <canvas id="steam-chart-bar"></canvas>
             </div>
         </div>
     </div>
+    <div class="flex justify-end">
+        <div class="change-chart mt-5 p-2.5 bg-[#6e77fc] rounded-md text-white font-Poppins text-[15px] font-bold lg:w-[25%] w-[30%] text-center hover:bg-[#383b63]">Bar Chart <i class="bi bi-bar-chart ml-2"></i></div>
+    </div>
 </div>
 
-<div id="food-waste-chart" class="bg-gradient-to-br from-[white] to-[#e2d3ea] p-10 rounded-md mb-10 hover:from-[white] hover:to-[#fccadb]">
+<div id="food-waste-chart" class="bg-gradient-to-br from-[white] to-[#e2d3ea] p-10 rounded-md mb-10 hover:from-[white] hover:to-[#fccadb] w-min">
     <div class="relative flex flex-col break-words w-min m-auto shadow-lg rounded bg-white bg-opacity-75">
         <div class="rounded-t mb-0 px-4 py-3 bg-transparent">
             <div class="flex flex-wrap items-center">
@@ -99,14 +119,18 @@
         </div>
         <div class="p-4 flex-auto">
             <!-- Food Waste Chart -->
-            <div class="relative w-max h-max font-Poppins">
+            <div class="relative font-Poppins lg:w-[40vw] lg:h-[35vw] md:w-[55vw] md:h-[50vw] w-[70vw] h-[85vw]">
                 <canvas id="food-chart"></canvas>
+                <canvas id="food-chart-bar"></canvas>
             </div>
         </div>
     </div>
+    <div class="flex justify-end">
+        <div class="change-chart mt-5 p-2.5 bg-[#6e77fc] rounded-md text-white font-Poppins text-[15px] font-bold lg:w-[25%] w-[30%] text-center hover:bg-[#383b63]">Bar Chart <i class="bi bi-bar-chart ml-2"></i></div>
+    </div>
 </div>
 
-<div id="solar-kwh-chart" class="bg-gradient-to-br from-[white] to-[#e2d3ea] p-10 rounded-md mb-10 hover:from-[white] hover:to-[#fccadb]">
+<div id="solar-kwh-chart" class="bg-gradient-to-br from-[white] to-[#e2d3ea] p-10 rounded-md mb-10 hover:from-[white] hover:to-[#fccadb] w-min">
     <div class="relative flex flex-col break-words w-min m-auto shadow-lg rounded bg-white bg-opacity-75">
         <div class="rounded-t mb-0 px-4 py-3 bg-transparent">
             <div class="flex flex-wrap items-center">
@@ -117,14 +141,18 @@
         </div>
         <div class="p-4 flex-auto">
             <!-- Solar Chart -->
-            <div class="relative w-max h-max font-Poppins">
+            <div class="relative font-Poppins lg:w-[40vw] lg:h-[35vw] md:w-[55vw] md:h-[50vw] w-[70vw] h-[85vw]">
                 <canvas id="solar-chart"></canvas>
+                <canvas id="solar-chart-bar"></canvas>
             </div>
         </div>
     </div>
+    <div class="flex justify-end">
+        <div class="change-chart mt-5 p-2.5 bg-[#6e77fc] rounded-md text-white font-Poppins text-[15px] font-bold lg:w-[25%] w-[30%] text-center hover:bg-[#383b63]">Bar Chart <i class="bi bi-bar-chart ml-2"></i></div>
+    </div>
 </div>
 
-<div id="water-recycled-chart" class="bg-gradient-to-br from-[white] to-[#e2d3ea] p-10 rounded-md mb-10 hover:from-[white] hover:to-[#fccadb]">
+<div id="water-recycled-chart" class="bg-gradient-to-br from-[white] to-[#e2d3ea] p-10 rounded-md mb-10 hover:from-[white] hover:to-[#fccadb] w-min">
     <div class="relative flex flex-col break-words w-min m-auto shadow-lg rounded bg-white bg-opacity-75">
         <div class="rounded-t mb-0 px-4 py-3 bg-transparent">
             <div class="flex flex-wrap items-center">
@@ -135,10 +163,14 @@
         </div>
         <div class="p-4 flex-auto">
             <!-- Water Recycled Chart -->
-            <div class="relative w-max h-max font-Poppins">
+            <div class="relative font-Poppins lg:w-[40vw] lg:h-[35vw] md:w-[55vw] md:h-[50vw] w-[70vw] h-[85vw]">
                 <canvas id="recycle-chart"></canvas>
+                <canvas id="recycle-chart-bar"></canvas>
             </div>
         </div>
+    </div>
+    <div class="flex justify-end">
+        <div class="change-chart mt-5 p-2.5 bg-[#6e77fc] rounded-md text-white font-Poppins text-[15px] font-bold lg:w-[25%] w-[30%] text-center hover:bg-[#383b63]">Bar Chart <i class="bi bi-bar-chart ml-2"></i></div>
     </div>
 </div>
 
@@ -149,10 +181,20 @@
 
     // function to dynamically make charts
     function makeChart(chart, data) {
+        // initialize chart type to be line
+        let chartType = 'line';
+        if (chart.includes('bar')) {
+            chartType = 'bar';
+            // flip the chart colors (for visual appeal)
+            let tempBgColor = data.datasets[0].backgroundColor;
+            data.datasets[0].backgroundColor = data.datasets[0].borderColor
+            data.datasets[0].borderColor = tempBgColor;
+        }
+        // initialize all data needed to create chart
         var ctx = document.getElementById(chart).getContext("2d");
         var charts = data;
-        var chartConfig = {
-            type: "line",
+        var config = {
+            type: chartType,
             data: charts,
             options: {
                 maintainAspectRatio: false,
@@ -231,36 +273,76 @@
                 },
             },
         };  
-        // calculate the canvas width and height so it is responsive
-        var canvasWidth = Math.min(window.screen.width * 0.85, 650);
-        var canvasHeight = window.screen.height * 0.5;
-        // set canvas width and height
-        ctx.canvas.width = canvasWidth;
-        ctx.canvas.height = canvasHeight;
+
         // generate chart
-        new Chart(ctx, chartConfig);
+        const newChart = new Chart(ctx, config);
+        // store chart
+        ctx.canvas.chart = newChart;
     }
 
     // i couldn't make this simpler sadly :,)
     // iterate over all chart names and render charts
     for (let i = 0; i < allCharts.length; i++) {
+        // initialize variable to store bar chart id
+        const barId = allCharts[i] + '-bar';
         if (i == 0) {
             makeChart(allCharts[i], {{{ allJsonData }}});
+            makeChart(barId, {{{ allJsonData }}});
         } else if (i == 1) {
-            makeChart(allCharts[i], {{{ waterConsData }}})
+            makeChart(allCharts[i], {{{ waterConsData }}});
+            makeChart(barId, {{{ waterConsData }}});
         } else if (i == 2) {
-            makeChart(allCharts[i], {{{ gasData }}})
+            makeChart(allCharts[i], {{{ gasData }}});
+            makeChart(barId, {{{ gasData }}});
         } else if (i == 3) {
-            makeChart(allCharts[i], {{{ gridData }}})
+            makeChart(allCharts[i], {{{ gridData }}});
+            makeChart(barId, {{{ gridData }}});
         } else if (i == 4) {
-            makeChart(allCharts[i], {{{ steamData }}})
+            makeChart(allCharts[i], {{{ steamData }}});
+            makeChart(barId, {{{ steamData }}});
         } else if (i == 5) {
-            makeChart(allCharts[i], {{{ foodData }}})
+            makeChart(allCharts[i], {{{ foodData }}});
+            makeChart(barId, {{{ foodData }}});
         } else if (i == 6) {
-            makeChart(allCharts[i], {{{ solarData }}})
+            makeChart(allCharts[i], {{{ solarData }}});
+            makeChart(barId, {{{ solarData }}});
         } else if (i == 7) {
-            makeChart(allCharts[i], {{{ waterRecData }}})
+            makeChart(allCharts[i], {{{ waterRecData }}});
+            makeChart(barId, {{{ waterRecData }}});
         }
+        // add display none so bar graph isnt shown immediately
+        document.getElementById(barId).style.display = 'none';
+    }
+
+    // function to change chart type on button click
+    let changeChartButtons = document.querySelectorAll('.change-chart');
+    for (let c = 0; c < changeChartButtons.length; c++) {
+        changeChartButtons[c].addEventListener('click', (event) => {
+            // find the parent chart container
+            let chartContainer = event.target.closest('.bg-gradient-to-br');
+            // toggle the display of line and bar charts within the container and change the text of the button
+            let lineChart = chartContainer.querySelector('canvas[id$="-chart"]');
+            let barChart = chartContainer.querySelector('canvas[id$="-chart-bar"]');
+            if (lineChart.style.display === 'none') {
+                lineChart.style.display = 'block';
+                barChart.style.display = 'none';
+                event.target.innerText = 'Bar Chart';
+                // create a new icon element to add to display
+                const icon = document.createElement('i');
+                icon.classList.add('bi', 'bi-bar-chart', 'ml-2');
+                // Append the <i> element to the event target
+                event.target.appendChild(icon);
+            } else {
+                lineChart.style.display = 'none';
+                barChart.style.display = 'block';
+                event.target.innerText = 'Line Chart';
+                // create a new icon element to add to display
+                const icon = document.createElement('i');
+                icon.classList.add('bi', 'bi-graph-up', 'ml-2');
+                // Append the <i> element to the event target
+                event.target.appendChild(icon);
+            }
+        });
     }
 
 </script>
