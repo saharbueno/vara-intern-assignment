@@ -53,7 +53,7 @@ A full-stack web application that imports environmental data from Google Sheets 
   <img width="547" alt="Screenshot 2024-04-26 at 2 29 34 AM" src="https://github.com/saharbueno/vara-intern-assignment/assets/69322388/658eb260-2167-481a-97cb-2c54b95afe41">
 </p>
 <p align="center">
-  <img width="753" alt="Screenshot 2024-04-26 at 2 29 42 AM" src="https://github.com/saharbueno/vara-intern-assignment/assets/69322388/7195a848-03fa-49e3-b134-f0dc3049f229">
+  <img width="564" alt="Screenshot 2024-04-26 at 2 29 42 AM" src="https://github.com/saharbueno/vara-intern-assignment/assets/69322388/7195a848-03fa-49e3-b134-f0dc3049f229">
 </p>
 <p align="center">
   <img width="545" alt="Screenshot 2024-04-26 at 2 29 52 AM" src="https://github.com/saharbueno/vara-intern-assignment/assets/69322388/a1582fc9-d706-4f73-9ecf-27f9996307ab">
