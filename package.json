@@ -6,7 +6,7 @@
   "scripts": {
     "build-css": "postcss src/css/styles.css -o src/public/css/styles.css",
     "watch": "tailwindcss --watch --input src/css/styles.css --output src/public/css/styles.css",
-    "start": "node app.mjs"
+    "start": "node src/app.mjs"
   },
   "author": "sahar bueno-abdala",
   "license": "ISC",
