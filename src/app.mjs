@@ -94,7 +94,7 @@ let solarData;
 let waterRecData;
 
 // route for getting all charts
-app.get('/', async (req, res) => {
+app.get('/dashboard', async (req, res) => {
     const incomingData = await readSheet();
     // get labels
     const dateLabels = incomingData[0].slice(1);
