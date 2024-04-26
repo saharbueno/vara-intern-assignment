@@ -7,7 +7,7 @@ A full-stack web application that imports environmental data from Google Sheets 
 
 ## Built With
 <p align="center">
-♡ HTML ❀ CSS ❀ JavaScript ❀ Tailwind CSS ❀ Bootstrap Icons ❀ Chart.js ❀ Google Sheets API ❀ Node.js ❀ Express.js ❀ Font Awesome ❀ OAuth 2.0 ♡
+❀ HTML ❀ CSS ❀ JavaScript ❀ Tailwind CSS ❀ Bootstrap Icons ❀ Chart.js ❀ Google Sheets API ❀ Node.js ❀ Express.js ❀ Font Awesome ❀ OAuth 2.0 ❀
 </p>
 
 ## Features
@@ -48,6 +48,14 @@ A full-stack web application that imports environmental data from Google Sheets 
 * Organizes code into separate HTML, CSS, JavaScript, and configuration files for better maintainability and readability.
 *  Utilizes ES6 modules for importing and exporting functionalities across files.
 
+## Visuals
+<p align="center">
+</p>
+<p align="center">
+</p>
+<p align="center">
+</p>
+
 ## <a name="install-run">Install & Run</a>
 
 *note: you will either need to use my google.json file or create your own using Google's API service -> [see info here](https://console.cloud.google.com/apis/library)*
@@ -64,4 +72,8 @@ node app.mjs
 
 <p align="center">
   <i>˚ʚ♡ɞ˚ Thanks for visiting! ˚ʚ♡ɞ˚</i>
+</p>
+
+<p align="center">
+  <img src="https://64.media.tumblr.com/af92d08e4b1d6b1299f07bb56cbcdabc/tumblr_nahffyXzlB1tgtx3jo1_1280.gifv" alt="Happy">
 </p>
