@@ -1,6 +1,7 @@
 // import all required libraries/mods
 import './config.mjs';
 import express from 'express';
+import favicon from 'server-favicon';
 import path from 'path';
 import { google } from 'googleapis';
 import { fileURLToPath } from 'url';
@@ -16,6 +17,9 @@ const __dirname = path.dirname(__filename);
 
 // set the public directory as the location for static files
 app.use(express.static(path.join(__dirname, 'public')));
+
+// use the serve-favicon middleware to serve the favicon
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
 // middleware to use req.body
 app.use(express.urlencoded({extended: false}));
