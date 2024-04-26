@@ -1,18 +1,14 @@
 # Vara Environmental Data Dashboard 🐻🌸
 
-*** 
+### [Want to get started and install right away? Click here!](#install-run)
 
 ## Description
 A full-stack web application that imports environmental data from Google Sheets of a small-scale food processing plant and generates interactive charts in the frontend. The dashboard will showcase the current environmental metrics of the plant, providing insights into various aspects of its operations.
 
-*** 
-
 ## Built With
 <p align="center">
-♡ HTML ♡ CSS ♡ JavaScript ♡ Tailwind CSS ♡ Bootstrap Icons ♡ Chart.js ♡ Google Sheets API ♡ Node.js ♡ Express.js ♡ Font Awesome ♡ OAuth 2.0 ♡
+♡ HTML ❀ CSS ❀ JavaScript ❀ Tailwind CSS ❀ Bootstrap Icons ❀ Chart.js ❀ Google Sheets API ❀ Node.js ❀ Express.js ❀ Font Awesome ❀ OAuth 2.0 ♡
 </p>
-
-***
 
 ## Features
 **♡** Interactive Sidebar
@@ -52,12 +48,20 @@ A full-stack web application that imports environmental data from Google Sheets 
 * Organizes code into separate HTML, CSS, JavaScript, and configuration files for better maintainability and readability.
 *  Utilizes ES6 modules for importing and exporting functionalities across files.
 
-***
+## <a name="install-run">Install & Run</a>
 
-## Install & Run
+*note: you will either need to use my google.json file or create your own using Google's API service -> [see info here](https://console.cloud.google.com/apis/library)*
+
 ```
 git clone https://github.com/saharbueno/vara-intern-assignment.git // go to project directory
 npm install
 cd src
 node app.mjs
 ```
+
+## Thank You!
+<p align="center">I would like to thank the co-founder of Vara who assigned this project to me. I learned so much throughout the process of creating this project-- I solidified my skills in Tailwind, learned how to use the Google Sheets API, and learned to make something more visually appealing with colors and design. I hope to continue to get better at being a full-stack developer and continue my career growth journey ໒꒰ྀི´ ˘ ` ꒱ྀིა!</p>
+
+<p align="center">
+  <i>˚ʚ♡ɞ˚ Thanks for visiting! ˚ʚ♡ɞ˚</i>
+</p>
