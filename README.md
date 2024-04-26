@@ -11,40 +11,40 @@ A full-stack web application that imports environmental data from Google Sheets 
 </p>
 
 ## Features
-**♡** Interactive Sidebar
+**♡ Interactive Sidebar**
 * Allows users to open and close the sidebar by clicking on an icon.
 * Displays various environmental data categories as clickable links for easy navigation.
 
-**♡** Search Functionality
+**♡ Search Functionality**
 * Provides a search bar to filter and scroll to specific environmental data categories. 
 * Smoothly scrolls to the selected category upon entering a search query.
 
-**♡** Dynamic Charts
+**♡ Dynamic Charts**
 * Utilizes Chart.js library to dynamically generate charts for different environmental data categories.
 * Supports both line and bar chart types.
 * Displays charts for water consumption, natural gas consumption, grid electricity consumption, steam consumption, food waste, solar KWh, and water recycled.
 
-**♡** Chart Type Switching
+**♡ Chart Type Switching**
 * Allows users to switch between line and bar chart views for each data category.
 * Toggles the display of line and bar charts with a button click.
 * Updates the button text and icon based on the currently displayed chart type.
 
-**♡** Responsive Design & Styling
+**♡ Responsive Design & Styling**
 * Ensures the dashboard layout is responsive across various screen sizes.
 * Utilizes media queries to adjust the layout and size of elements for optimal viewing.
 * Implements a visually appealing design with gradient backgrounds and iconography from Bootstrap Icons library.
 * Uses custom fonts and colors to enhance the aesthetic appeal of the dashboard.
 
-**♡** Data Fetching from Google Sheets
+**♡ Data Fetching from Google Sheets**
 * Utilizes Google Sheets API for fetching environmental data from a specified spreadsheet.
 * Reads data from the spreadsheet and populates the charts dynamically based on the retrieved data.
 
-**♡** Server-side Configuration
+**♡ Server-side Configuration**
 * Implements a server-side component using Express.js.
 * Configures the server to serve static files from a public directory.
 * Handles URL encoding and sets the view engine to handle rendering of dynamic content.
 
-**♡** Modular Code Structure
+**♡ Modular Code Structure**
 * Organizes code into separate HTML, CSS, JavaScript, and configuration files for better maintainability and readability.
 *  Utilizes ES6 modules for importing and exporting functionalities across files.
 
@@ -84,7 +84,7 @@ npm start
 
 
 ## Thank You!
-<p align="center">I would like to thank the co-founder of Vara who assigned this project to me. I learned so much throughout the process of creating this project-- I solidified my skills in Tailwind, learned how to use the Google Sheets API, and learned to make something more visually appealing with colors and design. I hope to continue to get better at being a full-stack developer and continue my career growth journey ໒꒰ྀི´ ˘ ` ꒱ྀིა!</p>
+I would like to thank the **co-founder of Vara** who assigned this project to me. I learned so much throughout the process of creating this project-- I solidified my skills in Tailwind, learned how to use the Google Sheets API, and learned to make something more visually appealing with colors and design. I hope to continue to get better at being a full-stack developer and continue my career growth journey ໒꒰ྀི´ ˘ ` ꒱ྀིა!</p>
 
 <p align="center">
   <a href="https://vara-intern-assignment-7b10492b6031.herokuapp.com/"><i>Visit my site!</i></a>
